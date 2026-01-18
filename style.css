@@ -1465,4 +1465,48 @@ footer a:hover{
   .img-hover{
     display: none;
   }
+
+}
+
+/* =========================
+   MOBILE FIXES
+========================= */
+@media (max-width: 768px) {
+
+  /* Main container */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Cards / spade sections */
+  .card,
+  .spade-card,
+  .home-card {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px auto;
+    padding: 24px;
+  }
+
+  /* Text inside cards */
+  .card h1,
+  .card h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* If you used grid on desktop */
+  .home-grid,
+  .spade-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
