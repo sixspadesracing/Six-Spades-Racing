@@ -1510,3 +1510,50 @@ footer a:hover{
     align-items: center;
   }
 }
+
+/* =========================
+   MOBILE: fix homepage hub cards sizing
+========================= */
+@media (max-width: 768px) {
+
+  /* Make sure the grid becomes a vertical stack */
+  .hub-grid,
+  .spade-grid,
+  .home-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    justify-items: center !important;
+    align-items: start !important;
+    padding: 18px 0 !important;
+  }
+
+  /* Force the actual card element to be card-sized */
+  .hub-card,
+  .card,
+  .spade-card,
+  .home-card {
+    width: min(86vw, 360px) !important;
+    aspect-ratio: 63 / 88 !important; /* playing card ratio */
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* Kill any scaling/position animations that shrink the cards on mobile */
+  .hub-card,
+  .card,
+  .spade-card,
+  .home-card {
+    transform: none !important;
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  /* If your card uses an inner front/back, make them fill the card */
+  .card-front,
+  .card-back {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
