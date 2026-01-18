@@ -1495,26 +1495,3 @@ footer a:hover{
     height: 100%;
   }
 }
-
-/* default desktop */
-.nav-links { display: flex; gap: 28px; }
-
-/* mobile menu */
-@media (max-width: 768px) {
-  .menu-toggle { display: block; z-index: 9999; }
-  .nav-links {
-    position: absolute;
-    top: 76px;
-    right: 18px;
-    display: none;
-    flex-direction: column;
-    gap: 14px;
-    padding: 14px 16px;
-    border-radius: 14px;
-    background: rgba(0,0,0,0.85);
-    border: 1px solid rgba(255,255,255,0.12);
-    backdrop-filter: blur(10px);
-    z-index: 9998;
-  }
-  .nav-links.open { display: flex; }
-}
