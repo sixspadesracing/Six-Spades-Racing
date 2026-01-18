@@ -175,3 +175,25 @@ if (document.body.classList.contains("page-team")) {
     });
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("menuToggle");
+  const nav = document.getElementById("navLinks");
+
+  if (!btn || !nav) return; // prevents errors on pages without header
+
+  btn.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  // Optional: close menu when you tap a link (mobile UX)
+  nav.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      nav.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+    });
+  });
+});
+
+
